@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="/movies-project/movies/css/style.css">
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="/movies-project">Back</a>
+    </header>
+    <section id="movie" class="grid movie-page">
+      <img class="movie-poster" src={{ movie.Poster }} alt={{ movie.Title }}>
+      <div class="grid-cell movie-details">
+        <h1 class="movie-title">{{ movie.Title }}</h1>
+        <p class="movie-meta">{{ movie.Released }}&nbsp;&nbsp;{{ movie.Runtime }} <br> 
+          {% for feature in features %}
+            <strong>
+              <a href="/movies-project/genre/{{ feature }}">{{ feature }}</a>
+            </strong>
+          {% endfor %}
+
+
+        </p>
+
+        <h3>Plot</h3>
+        <p>{{ movie.Plot }}</p>
+        <h3>Actors</h3>
+        <p>{{ movie.Actors }}</p>
+          }
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+Options +FollowSymLinks
+RewriteEngine On
+ 
+RewriteRule ^$ ./index.php
+RewriteRule ^genre/(.*)$ ./genre.php?type=$1
+RewriteRule ^movie/(.*)$ ./detail.php?name=$1
+
+ErrorDocument 404 /error.php
